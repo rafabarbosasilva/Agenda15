@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Agenda15.ResumoEventoPage"
+             Title="Resumo do Evento">
+    <VerticalStackLayout Spacing="25" Padding="30">
+        <Label Text="Resumo do Evento" FontSize="24" HorizontalOptions="Center" />
+        <Label Text="{Binding Evento.Nome}" FontSize="20" HorizontalOptions="Center" />
+        <Label Text="{Binding Evento.Local}" FontSize="16" HorizontalOptions="Center" />
+        <Label Text="Data de Início:" FontSize="14" />
+        <Label Text="{Binding Evento.DataInicio, StringFormat='{0:dd/MM/yyyy}'}" FontSize="14" />
+        <Label Text="Data de Término:" FontSize="14" />
+        <Label Text="{Binding Evento.DataTermino, StringFormat='{0:dd/MM/yyyy}'}" FontSize="14" />
+        <Label Text="Duração do Evento:" FontSize="14" />
+        <Label Text="{Binding Evento.DuracaoEventoEmDias}" FontSize="14" />
+        <Label Text="Número de Participantes:" FontSize="14" />
+        <Label Text="{Binding Evento.NumeroParticipantes}" FontSize="14" />
+        <Label Text="Custo Total:" FontSize="14" />
+        <Label Text="{Binding Evento.CustoTotal, StringFormat='R${0:F2}'}" FontSize="14" />
+    </VerticalStackLayout>
+</ContentPage>
